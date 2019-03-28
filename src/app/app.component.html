@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <div ng-view>
+            <header>
+                <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">Angular Routing Example</a>
+                    </div>
+                
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a routerLink='/home'><i class="fa fa-home"></i> Home</a></li>
+                        <li><a routerLink="/about"><i class="fa fa-shield"></i> About</a></li>
+                        <li><a routerLink="contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
+            </header>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
