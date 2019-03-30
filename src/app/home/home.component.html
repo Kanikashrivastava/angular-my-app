@@ -1,11 +1,12 @@
-
-<div class="jumbotron text-center">
-<!-- <p>
-  home works!
-</p> -->
-<div *ngFor="let item of userData">
-  <img src="{{ item.avatar_url }}"/>
-  <h3>{{ item.login }}</h3>
-</div>
-<!-- <h1>{{ title }}</h1> -->
+<div>
+  <div *ngFor="let item of userData">
+    <ul>
+      <a href="{{ item.html_url }}" target="_blank">
+        <div>
+          <img src="{{ item.avatar_url }}" class="user-img" />
+          <span>{{ item.login }}</span>
+        </div>
+      </a>
+    </ul>
+  </div>
 </div>

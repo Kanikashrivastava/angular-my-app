@@ -1,0 +1,9 @@
+.user-img {
+    height: auto;
+    width: 5%;
+    border-radius: 100px;
+    margin: 1%;
+}
+a:active{
+    color: black;
+}
