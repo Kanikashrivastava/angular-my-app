@@ -1,7 +1,11 @@
 
 <div class="jumbotron text-center">
-<p>
+<!-- <p>
   home works!
-</p>
-<h1>{{ title }}</h1>
+</p> -->
+<div *ngFor="let item of userData">
+  <img src="{{ item.avatar_url }}"/>
+  <h3>{{ item.login }}</h3>
+</div>
+<!-- <h1>{{ title }}</h1> -->
 </div>
