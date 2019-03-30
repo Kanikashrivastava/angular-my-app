@@ -17,17 +17,18 @@ import { Injectable } from '@angular/core';
 export class HomeComponent implements OnInit{
     title = 'homepage';
 
-    photos = [];
-
     constructor (private http: HttpClient) {}
 
     ngOnInit (): void {
       this.getData();
     }
+    userData:any = [];
 
     getData () {
-      this.http.get('https://api.github.com/users').subscribe((response) => {
-          console.log(response);
+      this.http.get('https://api.github.com/users')
+      .subscribe((response) => {
+        console.log(response);
+        this.userData = response;
         })
     }
 
