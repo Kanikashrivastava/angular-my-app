@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 // import 'rxjs/add/operator/toPromise';
-
+ "you@example.com"
+   "Your Name"
 
 
 @Component({
