@@ -1,12 +1,35 @@
-<div>
-  <div *ngFor="let item of userData">
-    <ul>
-      <a href="{{ item.html_url }}" target="_blank">
-        <div>
-          <img src="{{ item.avatar_url }}" class="user-img" />
-          <span>{{ item.login }}</span>
-        </div>
-      </a>
-    </ul>
+
+<div class="container">
+  <h2>{{title}}</h2>
+
+  <div class="pagination data">
+    <table class="table">
+      <tr>
+        <th>name</th>
+        <th>img</th>
+      </tr>
+      <tr *ngFor="let item of userData | paginate: { 
+          itemsPerPage:3,
+          currentPage: page,
+          id: 1,
+          totalItems: 15
+         }">
+        <th>{{ item.first_name }}</th>
+        <th>
+          <img src="{{ item.avatar }}" height="30px" ></th>
+      </tr>
+    </table>
+
+
+    <pagination-controls 
+    (pageChange) = "page = getServerData($event)"
+    id = "1"
+    maxSize = "3"
+    directionLinks = "true"
+    autohide = "true"
+    >
+
+    </pagination-controls>
+
   </div>
 </div>
